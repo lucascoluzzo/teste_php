@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS teste_php;
+
+USE teste_php;
+
+CREATE TABLE IF NOT EXISTS categorias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL UNIQUE,
+    preco DECIMAL(10, 2) NOT NULL DEFAULT 0,
+    categoria_id INT NOT NULL,
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+);

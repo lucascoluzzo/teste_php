@@ -1,0 +1,1 @@
+{"version":1,"defects":{"CategoriaControllerTest::testCadastrarCategoria":8,"ProdutoControllerTest::testCadastrarProduto":8},"times":{"CategoriaControllerTest::testCadastrarCategoria":0.016,"CategoriaControllerTest::testAtualizarCategoria":0.017,"CategoriaControllerTest::testListarCategorias":0.014,"ProdutoControllerTest::testCadastrarProduto":0.016}}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend CRUD</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>CRUD de Produtos</h1>
+    <button id="btnAddProduto" class="btn">Adicionar Produto</button>
+    <br>
+    <button id="btnAddCategoria" class="btn">Adicionar Categoria</button>
+    <br>
+    <table id="itemTable" class="table table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+
+<div id="modalAddCategoria" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Adicionar Categoria</h2>
+        <form id="formAddCategoria">
+            <input type="hidden" name="funcao" value="addCategoria">
+            <label for="descricao">Nome:</label>
+            <input type="text" id="descricaoAdd" name="nome" required>
+            <button type="submit" class="btn">Adicionar</button>
+        </form>
+    </div>
+</div>
+
+<div id="modalAdd" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Adicionar Produto</h2>
+        <form id="formAddProduto">
+            <input type="hidden" name="funcao" value="addProduto">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricaoAdd" name="descricao" required>
+            <label for="preco">Preço:</label>
+            <input type="text" id="precoAdd" name="preco" required>
+            <label for="categoria">Categoria:</label>
+            <select id="categoriaAdd" class="categorias" name="id_categoria" required>
+            </select>
+            <button type="submit" class="btn">Adicionar</button>
+        </form>
+    </div>
+</div>
+
+<div id="modalEdit" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Editar Produto</h2>
+        <form id="formEdit">
+            <input type="hidden" name="funcao" value="editarProduto">
+            <input type="hidden" id="idProduto" name="id">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricaoEdit" name="descricao" required>
+            <label for="preco">Preço:</label>
+            <input type="text" id="precoEdit" name="preco" required>
+            <label for="categoria">Categoria:</label>
+            <select id="categoriaEdit" class="categorias" name="id_categoria" required>
+            </select>
+            <button type="submit" class="btn">Atualizar</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
